@@ -213,6 +213,7 @@ section:nth-child(6) {
     grid-template-rows: repeat(8, 1fr);
 
     & .form-title {
+        display: grid;
         background-color: var(--brand-yellow);
         padding: 1em;
         grid-column-start: 1;
@@ -231,6 +232,7 @@ section:nth-child(6) {
     }
 
     & form {
+        display: grid;
         background-color: var(--light);
         padding: 1em;
         grid-column-start: 1;
