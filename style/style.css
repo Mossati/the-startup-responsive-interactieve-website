@@ -92,10 +92,6 @@ section:nth-child(6) {
         grid-column-end: span 8;
         grid-row-start: 6;
         grid-row-end: span 10;
-
-        & p {
-            text-align: center;
-        }
     }
 
 }
