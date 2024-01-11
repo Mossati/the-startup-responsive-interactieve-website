@@ -290,16 +290,19 @@ section:nth-child(6) {
 h1 {
     color: var(--html-blue);
     font-weight: var(--h1-weight);
+    font-size: 1.3em;
 }
 
 h2 {
     color: var(--html-blue);
     font-weight: var(--h2-weight);
+    font-size: 1.2em;
 }
 
 h3 {
     color: var(--html-blue);
     font-weight: var(--h3-weight);
+    font-size: 1.1em;
 }
 
 .sub-header {
