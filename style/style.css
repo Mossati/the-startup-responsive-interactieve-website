@@ -78,6 +78,7 @@ section:nth-child(6) {
     & h2 {
         background-color: var(--light);
         padding: 0.5em;
+        text-wrap: nowrap;
         grid-column-start: 2;
         grid-column-end: span 8;
         grid-row-start: 5;
