@@ -163,11 +163,21 @@ h3 {
         margin-bottom: 1em;
         border-radius: 2em;
         text-align: center;
+        margin-right: 100em;
+        transition: 1s ease-in;
 
         & span {
             font-weight: var(--list-numbers-weight);
             margin-right: 0.2em;
         }
+    }
+
+    .facts-slide {
+        animation-name: FactSlide;
+        animation-duration: 2s;
+        animation-delay: 2s;
+        animation-iteration-count: forwards;
+        animation-timing-function: ease-in;
     }
 }
 
@@ -352,5 +362,15 @@ h3 {
             color: var(--dark);
             font-size: var(--span-size);
         }
+    }
+}
+
+/* animations */
+@keyframes FactSlide {
+    0% {
+        margin-right: 100em;
+    }
+    100% {
+        margin-right: 0;
     }
 }
