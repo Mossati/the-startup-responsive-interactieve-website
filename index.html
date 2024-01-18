@@ -7,6 +7,7 @@
     <link rel="icon" type="image/x-icon" href="assets/brand-logo.ico">
     <link href="style/style.css" rel="stylesheet">
     <script src="script/script.js" defer></script>
+    <script src="https://kit.fontawesome.com/314aaf1ec7.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <header>
@@ -80,53 +81,72 @@
         <!-- tijdlijn -->
         <section>
             <ul class="timeline-list">
+                <div class="time-bar"></div>
                 <li>
+                    <button class="btn-time" type="button"><i class="fa-solid fa-chevron-down"></i></button>
                     <span>01 oktober 2012</span>
                     <h2>Oprichting De Voorhoede</h2>
+                    <div class="title-bar"></div>
                 </li>
                 <li>
+                    <button class="btn-time" type="button"><i class="fa-solid fa-chevron-down"></i></button>
                     <span>01 juli 2013</span>
                     <h2>Eerste Web App voor TV</h2>
-                    <span>Ziggo SGUI met jQueryMX</span>
+                    <div class="title-bar"></div>
+                    <p>Ziggo SGUI met jQueryMX</p>
                     <img src="assets/image 4.png" alt="img-web-app">
                 </li>
                 <li>
+                    <button class="btn-time" type="button"><i class="fa-solid fa-chevron-down"></i></button>
                     <span>01 juni 2014</span>
                     <h2>Eerste Single Page App</h2>
-                    <span>TBA CommTrac met Angular.JS</span>
+                    <div class="title-bar"></div>
+                    <p>TBA CommTrac met Angular.JS</p>
                 </li>
                 <li>
+                    <button class="btn-time" type="button"><i class="fa-solid fa-chevron-down"></i></button>
                     <span>13 maart 2016</span>
                     <h2>Begonnen met lesgeven op de Hogeschool van Amsterdam</h2>
-                    <span>Minors gericht op webdevelopment</span>
+                    <div class="title-bar"></div>
+                    <p>Minors gericht op webdevelopment</p>
                     <img src="assets/image 5.png" alt="img-les-school">
                 </li>
                 <li>
+                    <button class="btn-time" type="button"><i class="fa-solid fa-chevron-down"></i></button>
                     <span>17 augustus 2016</span>
                     <h2>Onze eerste Meetup</h2>
-                    <span>Onze eerste meetup georganiseerd: Front-end Forward in Amsterdam</span>
+                    <div class="title-bar"></div>
+                    <p>Onze eerste meetup georganiseerd: Front-end Forward in Amsterdam</p>
                 </li>
                 <li>
+                    <button class="btn-time" type="button"><i class="fa-solid fa-chevron-down"></i></button>
                     <span>07 november 2016</span>
                     <h2>Eerste code class</h2>
-                    <span>Collega's leren elkaar nieuwe dingen</span>
+                    <div class="title-bar"></div>
+                    <p>Collega's leren elkaar nieuwe dingen</p>
                     <img src="assets/image 6.png" alt="img-code-class">
                 </li>
                 <li>
+                    <button class="btn-time" type="button"><i class="fa-solid fa-chevron-down"></i></button>
                     <span>01 januari 2019</span>
                     <h2>Eerste kantoor in Delft</h2>
-                    <span>We namen intrek in de coworkingspace van Vakhuiswerk</span>
+                    <div class="title-bar"></div>
+                    <p>We namen intrek in de coworkingspace van Vakhuiswerk</p>
                 </li>
                 <li>
+                    <button class="btn-time" type="button"><i class="fa-solid fa-chevron-down"></i></button>
                     <span>21 januari 2020</span>
                     <h2>Opening nieuw kantoor Delft</h2>
-                    <span>Onze eigen plek aan de Koornmarkt</span>
+                    <div class="title-bar"></div>
+                    <p>Onze eigen plek aan de Koornmarkt</p>
                     <img src="assets/image 7.png" alt="img-kantoor-delft">
                 </li>
                 <li>
+                    <button class="btn-time" type="button"><i class="fa-solid fa-chevron-down"></i></button>
                     <span>21 september 2021</span>
                     <h2>Opening nieuw kantoor Amsterdam</h2>
-                    <span>Samen met Hike One hebben we nu een kantoor in de Houthavens</span>
+                    <div class="title-bar"></div>
+                    <p>Samen met Hike One hebben we nu een kantoor in de Houthavens</p>
                     <img src="assets/image 8.png" alt="img-kantoor-amsterdam">
                 </li>
             </ul>
@@ -164,11 +184,11 @@
                 </div>
                 <form>
                     <label for="name">Mijn naam is</label>
-                    <input type="text" name="name" placeholder="Naam">
+                    <input type="text" name="name" id="name" placeholder="Naam" autocomplete="name" required>
                     <label for="email">Mijn e-mailadres is</label>
-                    <input type="email" name="email" placeholder="E-mailadres">
+                    <input type="email" name="email" id="email" placeholder="E-mailadres" autocomplete="email" required>
                     <label for="message">Mijn bericht</label>
-                    <textarea name="message" placeholder="Felicitatie"></textarea>
+                    <textarea name="message" id="message" placeholder="Felicitatie" required></textarea>
                     <input class="btn" type="submit" value="Versturen →">
                 </form>
             </article>
