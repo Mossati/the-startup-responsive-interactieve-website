@@ -26,7 +26,6 @@ items.forEach(function(li) {
     var itemBtn = li.querySelector('.btn-time');
     var itemP = li.querySelector('p');
     var itemImg = li.querySelector('img');
-    var itemTitle = li.querySelector('h2');
     var itemBar = li.querySelector(".title-bar");
 
     itemBtn.addEventListener('click', function () {
