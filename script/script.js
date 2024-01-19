@@ -1,21 +1,28 @@
-// animation cijfers & facts
-function FactsList() {
-    var parent = document.getElementById("facts-list");
-    var child = parent.getElementsByTagName("li");
-    var rect = parent.getBoundingClientRect();
-    var viewportHeight = window.innerHeight;
+//facts
+var factsList = document.querySelector(".facts-list");
+var factsItems = factsList.querySelectorAll('li');
+var factsPosition = factsList.offsetTop;
+console.log(factsPosition);
 
-    if (rect < viewportHeight) {
-        for (var i = 0; i < child.length; i++) {
-            var childpos = child[i].getBoundingClientRect().top;
-            if (childpos < window.innerHeight) {
-                child[i].classList.toggle("facts-slide");
+
+
+function NumberCounter() {
+    factsItems.forEach(function(li) {
+        var spanNumber = li.querySelector('span');
+        var spanInt = parseInt(spanNumber.innerHTML);
+        var count = 0;
+
+        var counterTime = setInterval(function(){
+            spanNumber.innerHTML = count.toString();
+            count++;
+            if (count > spanInt) {
+                clearInterval(counterTime);
             }
-        }
-    }
+        }, 25);
+    });
 }
 
-window.addEventListener("scroll", FactsList());
+NumberCounter();
 
 // tijdlijn
 var timeList = document.querySelector(".timeline-list");
