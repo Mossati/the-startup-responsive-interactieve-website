@@ -11,8 +11,10 @@
 </head>
 <body>
     <header>
-        <p class="sub-header">Lustrum</p>
-        <h1>De Voorhoede bestaat 10 jaar!</h1>
+        <div>
+            <p class="sub-header">Lustrum</p>
+            <h1>De Voorhoede bestaat 10 jaar!</h1>
+        </div>
         <img class="brand-logo" src="assets/brand-logo.png" alt="brand-logo">
     </header>
     <main>
@@ -68,8 +70,8 @@
                 <div class="img-container">
                     <img src="assets/image-3.png" alt="profile-img">
                 </div>
-                <h3>De grote droom van Jasper:</h3>
                 <div class="content-container">
+                    <h3>De grote droom van Jasper:</h3>
                     <p>
                         “Het klinkt weinig ambitieus, maar ik hoop dat we vooral dit kunnen blijven doen, wat we doen. Als hecht en gespecialiseerd team een impact maken binnen het vakgebied. En voorop lopen in de beste front-end oplossingen.”
                     </p>
@@ -183,10 +185,16 @@
                     <p>Je felicitatie sturen via ons formulier, dat kan!</p>
                 </div>
                 <form>
-                    <label for="name">Mijn naam is</label>
-                    <input type="text" name="name" id="name" placeholder="Naam" autocomplete="name" required>
-                    <label for="email">Mijn e-mailadres is</label>
-                    <input type="email" name="email" id="email" placeholder="E-mailadres" autocomplete="email" required>
+                    <div class="form-desktop">
+                        <div>
+                            <label for="name">Mijn naam is</label>
+                            <input type="text" name="name" id="name" placeholder="Naam" autocomplete="name" required>
+                        </div>
+                        <div>
+                            <label for="email">Mijn e-mailadres is</label>
+                            <input type="email" name="email" id="email" placeholder="E-mailadres" autocomplete="email" required>
+                        </div>
+                    </div>
                     <label for="message">Mijn bericht</label>
                     <textarea name="message" id="message" placeholder="Felicitatie" required></textarea>
                     <input class="btn" type="submit" value="Versturen →">
