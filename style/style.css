@@ -1,5 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
 
+/* ========================================================================================== */
+/* root */
+/* ========================================================================================== */
 :root {
     /* colors */
     --html-blue: #00F;
@@ -54,7 +57,7 @@ header {
 
 section {
     width: 100%;
-    margin: 1em 0;
+    margin: 2em 0;
     padding: 1em;
 
     & h2 {
@@ -65,8 +68,9 @@ section {
 section:nth-child(6) {
     padding: 0;
 }
-
+/* ========================================================================================== */
 /* typografie */
+/* ========================================================================================== */
 h1 {
     color: var(--html-blue);
     font-weight: var(--h1-weight);
@@ -88,8 +92,9 @@ h3 {
 .sub-header {
     color: var(--html-blue);
 }
-
+/* ========================================================================================== */
 /* buttons */
+/* ========================================================================================== */
 .btn {
     display: inline-block;
     text-decoration: none;
@@ -106,8 +111,9 @@ h3 {
 .btn:hover {
     opacity: 0.75;
 }
-
+/* ========================================================================================== */
 /* section artikelen */
+/* ========================================================================================== */
 .article-card {
     display: grid;
     grid-template-columns: repeat(8, 1fr);
@@ -123,30 +129,41 @@ h3 {
         grid-row-end: span 6;
     }
 
-    & h2 {
-        display: grid;
-        background-color: var(--light);
-        padding: 0.5em;
-        text-wrap: nowrap;
-        grid-column-start: 2;
-        grid-column-end: span 8;
-        grid-row-start: 5;
-        grid-row-end: span 6;
-    }
-
     & .content-container {
         color: var(--html-blue);
-        background-color: var(--light);
-        padding: 1em;
         grid-column-start: 1;
         grid-column-end: span 8;
         grid-row-start: 6;
         grid-row-end: span 10;
+        display: flex;
+        flex-direction: column;
+
+        & .heading-end {
+            display: flex;
+            align-self: flex-end;
+        }
+
+        & h2 {
+            display: flex;
+            align-self: flex-start;
+            background-color: var(--light);
+            padding: 0.5em;
+            text-wrap: nowrap;
+            grid-column-start: 2;
+            grid-column-end: span 8;
+            grid-row-start: 5;
+            grid-row-end: span 6;
+        }
+
+        & .text-container {
+            background-color: var(--light);
+            padding: 1em;
+        }
     }
-
 }
-
+/* ========================================================================================== */
 /* section cijfers en facts */
+/* ========================================================================================== */
 .facts-list {
     list-style-type: none;
     display: flex;
@@ -179,8 +196,9 @@ h3 {
         animation-timing-function: ease-in;
     }
 }
-
+/* ========================================================================================== */
 /* section interview */
+/* ========================================================================================== */
 .article-interview {
     display: flex;
     flex-direction: column;
@@ -205,8 +223,9 @@ h3 {
         }
     }
 }
-
+/* ========================================================================================== */
 /* section timeline */
+/* ========================================================================================== */
 .timeline-list {
     display: flex;
     flex-direction: column;
@@ -216,7 +235,7 @@ h3 {
     padding: 1em;
     position: relative;
 
-    & .time-bar {
+    & #time-bar {
         background-color: var(--brand-yellow);
         width: 0.1em;
         height: 2.75em;
@@ -279,6 +298,7 @@ h3 {
             outline: none;
             border: none;
             color: var(--light);
+            z-index: 999;
         }
 
         & .btn-time::before {
@@ -317,8 +337,9 @@ h3 {
         background-image: linear-gradient(180deg, var(--html-blue), var(--bg-pastel));
     }
 }
-
+/* ========================================================================================== */
 /* section collage */
+/* ========================================================================================== */
 .img-list {
     list-style-type: none;
     display: flex;
@@ -336,8 +357,9 @@ h3 {
         }
     }
 }
-
+/* ========================================================================================== */
 /* section formulier */
+/* ========================================================================================== */
 .article-form {
     display: grid;
     grid-template-columns: repeat(6, 1fr);
@@ -395,33 +417,50 @@ h3 {
         }
     }
 }
-
+/* ========================================================================================== */
 /* section comments */
+/* ========================================================================================== */
 .comment-list {
-    list-style-type: none;
-    display: flex;
     flex-direction: column;
     justify-content: center;
-    margin-top: 1em;
 
     & li {
-        border-left: 0.1em solid var(--dark);
         padding: 1em;
         margin-bottom: 1em;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
 
-        & p {
-            color: var(--html-blue);
+        & .left-comment {
+            display: none;
+            padding-right: 1em;
+            width: 20%;
+
+            & p {
+                color: var(--dark);
+            }
         }
 
-        & span {
-            display: inline-block;
-            color: var(--dark);
-            font-size: var(--span-size);
+        & .right-comment {
+            border-left: 0.1em solid var(--dark);
+            padding-left: 1em;
+            width: 50%;
+
+            & p {
+                color: var(--html-blue);
+            }
+
+            & span {
+                display: inline-block;
+                color: var(--dark);
+                font-size: var(--span-size);
+            }
         }
     }
 }
-
+/* ========================================================================================== */
 /* animations classess */
+/* ========================================================================================== */
 .keyframe-fade-slide {
     animation-name: fadeSlide;
     animation-duration: 2.5s;
@@ -449,8 +488,9 @@ h3 {
     animation-timing-function: ease-out;
     animation-fill-mode: forwards;
 }
-
-/* animations */
+/* ========================================================================================== */
+/* keyframes */
+/* ========================================================================================== */
 @keyframes titleBar {
     from {
         width: 0;
@@ -494,8 +534,9 @@ h3 {
         opacity: 0;
     }
 }
-
+/* ========================================================================================== */
 /* mediaqueries */
+/* ========================================================================================== */
 @media only screen and (min-width: 600px) {
     main {
         display: flex;
@@ -505,7 +546,7 @@ h3 {
     }
 
     section {
-        width: 85%;
+        width: 75%;
     }
 
     section:nth-child(6) {
@@ -517,61 +558,101 @@ h3 {
         justify-content: space-between;
         padding: 2em 10em;
     }
-
+    
+    /* artikel */
     .article-card {
+        display: grid;
         grid-template-columns: repeat(8, 1fr);
-        grid-template-rows: repeat(10, 1fr);
+        grid-template-rows: repeat(8, 1fr);
+        position: relative;
     
         & img {
+            display: grid;
+            width: 100%;
+            height: auto;
             grid-column-start: 1;
             grid-column-end: span 4;
-            grid-row-start: 3;
-            grid-row-end: span 5;
+            grid-row-start: 2;
+            grid-row-end: span 6;
         }
     
         & h2 {
-            grid-column-start: 5;
-            grid-column-end: span 8;
-            grid-row-start: 1;
-            grid-row-end: span 2;
-            position: relative;
-        }
-
-        & h2::before {
-            content: "";
             background-color: var(--light);
-            width: 10em;
-            height: 100%;
-            position: absolute;
-            top: 0;
-            left: -5em;
-            z-index: -1;
+            padding: 0;
+            text-wrap: nowrap;
+            text-align: left;
+            margin-bottom: 0.5em;
         }
     
         & .content-container {
+            color: var(--html-blue);
+            background-color: var(--light);
+            padding: 1em 2em;
             grid-column-start: 5;
             grid-column-end: span 8;
-            grid-row-start: 3;
-            grid-row-end: span 10;
-            position: relative;
-        }
-
-        & .content-container::before {
-            content: "";
-            background-color: var(--light);
-            width: 10em;
-            height: 100%;
-            position: absolute;
-            top: 0;
-            left: -6em;
-            z-index: -1;
+            grid-row-start: 2;
+            grid-row-end: span 6;
         }
     }
 
+    & .article-card::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        background-color: var(--light);
+        width: 75%;
+        height: 100%;
+        z-index: -1;
+    }
+
+    & .reverse {
+        & img {
+            display: grid;
+            width: 100%;
+            height: auto;
+            grid-column-start: 5;
+            grid-column-end: span 8;
+            grid-row-start: 2;
+            grid-row-end: span 6;
+        }
+
+        & .content-container {
+            color: var(--html-blue);
+            background-color: var(--light);
+            padding: 1em 2em;
+            grid-column-start: 1;
+            grid-column-end: span 4;
+            grid-row-start: 2;
+            grid-row-end: span 6;
+        }
+    }
+
+    & .reverse::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-color: var(--light);
+        width: 75%;
+        height: 100%;
+        z-index: -1;
+    }
+
+    /* artikel interview */
     .article-interview {
         flex-direction: row;
+
+        & .img-container-main {
+            margin-right: 1em;
+        }
+
+        & .content-container {
+            width: 80%;
+        }
     }
 
+    /* cijfers & facts lijst */
     .facts-list {
         display: flex;
         flex-direction: row;
@@ -582,28 +663,87 @@ h3 {
         }
     }
 
+    /* tijdlijn */
     .timeline-list {
-        background-color: chocolate;
-        text-align: left;
+        border: none;
 
-        & li:nth-child(odd) {
-            background-color: aquamarine;
+        & #time-bar {
+            position: absolute;
+            top: 0;
+            left: 50%;
+            width: 0.1em;
+            height: 2.75em;
+            background-color: var(--brand-yellow);
+        }
+
+        & li {
+            width: 50%;
+        }
+
+        & li:nth-child(even) {
+            padding-right: 1em;
+            position: relative;
+
+            & span {
+                display: block;
+                text-align: right;
+            }
+
+            & h2 {
+                text-align: right;
+            }
 
             & .btn-time {
                 position: absolute;
                 top: 2.75em;
-                left: 50em;
+                left: auto;
+                right: -0.8em;
                 transform: translateY(-50%);
             }
         }
+
+        & li:nth-child(odd) {
+            align-self: flex-end;
+            padding-left: 1em;
+            position: relative;
+
+            & .btn-time {
+                position: absolute;
+                top: 2.75em;
+                left: -0.6em;
+                transform: translateY(-50%);
+            }
+        }
+
+        & li:last-child::before {
+            content: "";
+            position: absolute;
+            bottom: -3em;
+            left: 100%;
+            width: 0.15em;
+            height: 100%;
+            background-image: linear-gradient(180deg, var(--html-blue), var(--bg-pastel));
+        }
     }
 
+    & .timeline-list::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 50%;
+        width: 0.1em;
+        height: 100%;
+        background-color: var(--html-blue);
+    }
+
+    /* afbeelding collage */
     .img-list {
         & li {
             width: 25%;
         }
     }
 
+    /* formulier */
     .article-form {
         grid-template-columns: repeat(10, 1fr);
         grid-template-rows: repeat(8, 1fr);
@@ -648,11 +788,20 @@ h3 {
             content: "";
             background-color: var(--light);
             width: 100%;
-            height: 115%;
+            height: 110%;
             position: absolute;
-            top: -2em;
+            top: -1em;
             left: 0;
             z-index: -1;
         }
     }
-  }
+
+    /* section comments */
+    .comment-list {
+        & li {
+            & .left-comment {
+                display: block;
+            }
+        }
+    }
+}

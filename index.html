@@ -22,11 +22,13 @@
         <section>
             <article class="article-card">
                 <img src="assets/image-1.png" alt="de-toekomst-van-front-end">
-                <h2>De toekomst van front-end</h2>
                 <div class="content-container">
-                    <p>
-                        Op 1 oktober 2022 bestaat De Voorhoede alweer 10 jaar: een lustrum! De afgelopen jaren is onze organisatie flink gegroeid: in kantoor, kennis en collega's. Er is veel veranderd. Niet alleen bij De Voorhoede, maar ook op front-end gebied. Natuurlijk hebben we ook heel veel plannen voor de komende jaren. Blik met ons terug op de eerste 10 jaar en kijk mee naar onze voorspellingen voor de toekomst.
-                    </p>
+                    <h2 class="heading-end">De toekomst van front-end</h2>
+                    <div class="text-container">
+                        <p>
+                            Op 1 oktober 2022 bestaat De Voorhoede alweer 10 jaar: een lustrum! De afgelopen jaren is onze organisatie flink gegroeid: in kantoor, kennis en collega's. Er is veel veranderd. Niet alleen bij De Voorhoede, maar ook op front-end gebied. Natuurlijk hebben we ook heel veel plannen voor de komende jaren. Blik met ons terug op de eerste 10 jaar en kijk mee naar onze voorspellingen voor de toekomst.
+                        </p>
+                    </div>
                 </div>
             </article>
         </section>
@@ -52,14 +54,16 @@
 
         <!-- artikel -->
         <section>
-            <article class="article-card">
-                <img src="assets/image-2.png" alt="de-toekomst-van-front-end">
-                <h2>Onze visie op frontend</h2>
+            <article class="article-card reverse">
+                <img src="assets/image-2.png" alt="onze-visie-op-frontend">
                 <div class="content-container">
-                    <p>
-                        Dit jaar bestaat De Voorhoede 10 jaar. In al die jaren is front-end gegroeid van een niche naar een onderdeel van alles. Wij vinden het erg leuk om koplopers te zijn en kijken nu naar wat de toekomst van front-end ons gaat brengen.
-                    </p>
-                    <a class="btn" href="#">Lees alles over de toekomst van front-end</a>
+                    <h2>Onze visie op frontend</h2>
+                    <div class="text-container">
+                        <p>
+                            Dit jaar bestaat De Voorhoede 10 jaar. In al die jaren is front-end gegroeid van een niche naar een onderdeel van alles. Wij vinden het erg leuk om koplopers te zijn en kijken nu naar wat de toekomst van front-end ons gaat brengen.
+                        </p>
+                        <a class="btn" href="#">Lees alles over de toekomst van front-end</a>
+                    </div>
                 </div>
             </article>
         </section>
@@ -67,8 +71,10 @@
         <!-- interview -->
         <section>
             <article class="article-interview">
-                <div class="img-container">
-                    <img src="assets/image-3.png" alt="profile-img">
+                <div class="img-container-main">
+                    <div class="img-container">
+                        <img src="assets/image-3.png" alt="profile-img">
+                    </div>
                 </div>
                 <div class="content-container">
                     <h3>De grote droom van Jasper:</h3>
@@ -83,7 +89,7 @@
         <!-- tijdlijn -->
         <section>
             <ul class="timeline-list">
-                <li class="time-bar"></li>
+                <div class="time-bar" id="time-bar"></div>
                 <li>
                     <button class="btn-time" type="button"><i class="fa-solid fa-chevron-down"></i></button>
                     <span>01 oktober 2012</span>
@@ -207,16 +213,31 @@
             <h2>Felicitaties</h2>
             <ul class="comment-list">
                 <li>
-                    <p>“Gefeliciteerd met jullie 10 jaar! Op nog vele jaren!”</p>
-                    <span>door Koop</span>
+                    <div class="left-comment">
+                        <p>05 jan 2023</p>
+                    </div>
+                    <div class="right-comment">
+                        <p>“Gefeliciteerd met jullie 10 jaar! Op nog vele jaren!”</p>
+                        <span>door Koop</span>
+                    </div>
                 </li>
                 <li>
-                    <p>“Vanaf het begin er bij geweest. Op naar de volgende 10”</p>
-                    <span>door Declan</span>
+                    <div class="left-comment">
+                        <p>20 dec 2022</p>
+                    </div>
+                    <div class="right-comment">
+                        <p>“Vanaf het begin er bij geweest. Op naar de volgende 10”</p>
+                        <span>door Declan</span>
+                    </div>
                 </li>
                 <li>
-                    <p>“Gefeliciteerd!”</p>
-                    <span>door Jasper</span>
+                    <div class="left-comment">
+                        <p>20 sep 2022</p>
+                    </div>
+                    <div class="right-comment">
+                        <p>“Gefeliciteerd!”</p>
+                        <span>door Jasper</span>
+                    </div>
                 </li>
             </ul>
         </section>

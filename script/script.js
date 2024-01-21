@@ -4,8 +4,6 @@ var factsItems = factsList.querySelectorAll('li');
 var factsPosition = factsList.offsetTop;
 console.log(factsPosition);
 
-
-
 function NumberCounter() {
     factsItems.forEach(function(li) {
         var spanNumber = li.querySelector('span');
