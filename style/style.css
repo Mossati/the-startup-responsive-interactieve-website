@@ -129,36 +129,33 @@ h3 {
         grid-row-end: span 6;
     }
 
+    & h2 {
+        background-color: var(--light);
+        padding: 0.5em;
+        text-wrap: nowrap;
+        grid-column-start: 2;
+        grid-column-end: span 8;
+        grid-row-start: 5;
+        grid-row-end: span 6;
+    }
+
     & .content-container {
+        background-color: var(--light);
         color: var(--html-blue);
+        padding: 1em;
         grid-column-start: 1;
         grid-column-end: span 8;
         grid-row-start: 6;
         grid-row-end: span 10;
-        display: flex;
-        flex-direction: column;
+    }
+}
 
-        & .heading-end {
-            display: flex;
-            align-self: flex-end;
-        }
-
-        & h2 {
-            display: flex;
-            align-self: flex-start;
-            background-color: var(--light);
-            padding: 0.5em;
-            text-wrap: nowrap;
-            grid-column-start: 2;
-            grid-column-end: span 8;
-            grid-row-start: 5;
-            grid-row-end: span 6;
-        }
-
-        & .text-container {
-            background-color: var(--light);
-            padding: 1em;
-        }
+.reverse {
+    & h2 {
+        grid-column-start: 1;
+        grid-column-end: span 7;
+        grid-row-start: 5;
+        grid-row-end: span 6;
     }
 }
 /* ========================================================================================== */
@@ -203,17 +200,20 @@ h3 {
     display: flex;
     flex-direction: column;
 
-    & .img-container {
+    & .img-container-main {
         align-self: center;
-        width: 10em;
-        height: 10em;
-        border-radius: 50%;
-        overflow: hidden;
-        margin-bottom: 1em;
 
-        & img {
-            width: 100%;
-            height: auto;
+        & .img-container {
+            width: 10em;
+            height: 10em;
+            border-radius: 50%;
+            overflow: hidden;
+            margin-bottom: 1em;
+    
+            & img {
+                width: 100%;
+                height: auto;
+            }
         }
     }
 
@@ -262,9 +262,15 @@ h3 {
             transition: 1s ease;
         }
 
-        & h2 {
-            text-align: left;
+        & .time-title {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
             position: relative;
+
+            & h2 {
+                text-align: left;
+            }
         }
 
         & .title-bar {
@@ -273,18 +279,6 @@ h3 {
             height: 0.1em;
             display: none;
         }
-
-        /* & h2::before {
-            content: "";
-            background-color: var(--html-blue);
-            width: 1em;
-            height: 1em;
-            border-radius: 50%;
-            position: absolute;
-            top: 50%;
-            left: -1.4em;
-            transform: translateY(-50%);
-        } */
 
         & .btn-time {
             background-color: var(--html-blue);
@@ -444,7 +438,7 @@ h3 {
         & .right-comment {
             border-left: 0.1em solid var(--dark);
             padding-left: 1em;
-            width: 50%;
+            width: 100%;
 
             & p {
                 color: var(--html-blue);
@@ -537,7 +531,7 @@ h3 {
 /* ========================================================================================== */
 /* mediaqueries */
 /* ========================================================================================== */
-@media only screen and (min-width: 600px) {
+@media only screen and (min-width: 800px) {
     main {
         display: flex;
         flex-direction: column;
@@ -563,7 +557,7 @@ h3 {
     .article-card {
         display: grid;
         grid-template-columns: repeat(8, 1fr);
-        grid-template-rows: repeat(8, 1fr);
+        grid-template-rows: repeat(6, 1fr);
         position: relative;
     
         & img {
@@ -573,15 +567,18 @@ h3 {
             grid-column-start: 1;
             grid-column-end: span 4;
             grid-row-start: 2;
-            grid-row-end: span 6;
+            grid-row-end: span 4;
         }
-    
+
         & h2 {
             background-color: var(--light);
             padding: 0;
             text-wrap: nowrap;
-            text-align: left;
-            margin-bottom: 0.5em;
+            margin-top: 2em;
+            grid-column-start: 5;
+            grid-column-end: span 8;
+            grid-row-start: 2;
+            grid-row-end: span 2;
         }
     
         & .content-container {
@@ -590,8 +587,8 @@ h3 {
             padding: 1em 2em;
             grid-column-start: 5;
             grid-column-end: span 8;
-            grid-row-start: 2;
-            grid-row-end: span 6;
+            grid-row-start: 3;
+            grid-row-end: span 4;
         }
     }
 
@@ -608,23 +605,24 @@ h3 {
 
     & .reverse {
         & img {
-            display: grid;
-            width: 100%;
-            height: auto;
             grid-column-start: 5;
-            grid-column-end: span 8;
+            grid-column-end: span ;
             grid-row-start: 2;
-            grid-row-end: span 6;
+            grid-row-end: span 4;
         }
 
-        & .content-container {
-            color: var(--html-blue);
-            background-color: var(--light);
-            padding: 1em 2em;
+        & h2 {
             grid-column-start: 1;
             grid-column-end: span 4;
             grid-row-start: 2;
-            grid-row-end: span 6;
+            grid-row-end: span 2;
+        }
+
+        & .content-container {
+            grid-column-start: 1;
+            grid-column-end: span 4;
+            grid-row-start: 3;
+            grid-row-end: span 4;
         }
     }
 
@@ -684,12 +682,19 @@ h3 {
             padding-right: 1em;
             position: relative;
 
+            & .time-title {
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                align-items: flex-end;
+            }
+
             & span {
                 display: block;
                 text-align: right;
             }
 
-            & h2 {
+            & p {
                 text-align: right;
             }
 
@@ -801,6 +806,10 @@ h3 {
         & li {
             & .left-comment {
                 display: block;
+            }
+
+            & .right-comment {
+                width: 50%;
             }
         }
     }

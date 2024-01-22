@@ -20,8 +20,6 @@ function NumberCounter() {
     });
 }
 
-NumberCounter();
-
 // tijdlijn
 var timeList = document.querySelector(".timeline-list");
 var items = timeList.querySelectorAll('li');
@@ -31,7 +29,7 @@ items.forEach(function(li) {
     var itemBtn = li.querySelector('.btn-time');
     var itemP = li.querySelector('p');
     var itemImg = li.querySelector('img');
-    var itemBar = li.querySelector(".title-bar");
+    var itemBar = li.querySelector(".time-title .title-bar");
 
     itemBtn.addEventListener('click', function () {
         var itemPosition = li.offsetTop;
@@ -55,7 +53,7 @@ items.forEach(function(li) {
             var barStyle = window.getComputedStyle(itemBar);
 
             if (barStyle.display === "none") {
-                itemBar.style.display = "block";
+                itemBar.style.display = "flex";
             } else {
                 itemBar.style.display = "none";
             }
@@ -102,3 +100,10 @@ items.forEach(function(li) {
         }
     });
 });
+
+// intersection observer
+const observer = new IntersectionObserver(entries => {
+    NumberCounter();
+})
+
+observer.observe(document.getElementById("facts-list"));
