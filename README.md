@@ -6,11 +6,11 @@ De Voorhoede is een webdevelopment bedrijf waarbij ze werken aan diverse
 projecten groot of klein met het bouwen van websites.
 
 ## Inhoud
-*[Beschrijving](#beschrijving)
-*[Ontwerpprobleem](#ontwerpprobleem)
-*[Gebruik](#gebruik)
-*[Kenmerken](#kenmerken)
-*[Checklist](#checklist)
+* [Beschrijving](#beschrijving)
+* [Ontwerpprobleem](#ontwerpprobleem)
+* [Gebruik](#gebruik)
+* [Kenmerken](#kenmerken)
+* [Checklist](#checklist)
 
 ## Beschrijving
 <!-- In de Beschrijving staat hoe je project er uit ziet, hoe het werkt en wat je er mee kan. -->
