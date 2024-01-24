@@ -280,7 +280,7 @@ h3 {
             display: none;
         }
 
-        & .btn-time {
+        & .button-timeline {
             background-color: var(--html-blue);
             width: 1.5em;
             height: 1.5em;
@@ -295,7 +295,7 @@ h3 {
             z-index: 999;
         }
 
-        & .btn-time::before {
+        & .button-timeline::before {
             content: "";
             background-color: var(--html-blue);
             width: 1.5em;
@@ -698,7 +698,7 @@ h3 {
                 text-align: right;
             }
 
-            & .btn-time {
+            & .button-timeline {
                 position: absolute;
                 top: 2.75em;
                 left: auto;
@@ -712,7 +712,7 @@ h3 {
             padding-left: 1em;
             position: relative;
 
-            & .btn-time {
+            & .button-timeline {
                 position: absolute;
                 top: 2.75em;
                 left: -0.6em;

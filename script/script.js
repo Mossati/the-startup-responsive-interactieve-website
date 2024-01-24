@@ -26,7 +26,7 @@ var items = timeList.querySelectorAll('li');
 var timeBar = document.querySelector(".time-bar");
 
 items.forEach(function(li) {
-    var itemBtn = li.querySelector('.btn-time');
+    var itemBtn = li.querySelector('.button-timeline');
     var itemP = li.querySelector('p');
     var itemImg = li.querySelector('img');
     var itemBar = li.querySelector(".time-title .title-bar");
